@@ -1,13 +1,16 @@
-  body {
-    background: #a3291d;
-    font-family: 'Segoe UI', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-  }
+ body {
+  background: #a3291d;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden; /* ✅ Impede rolagem lateral */
+  overflow-y: auto;
+  position: relative;
+}
+
 
   .heart, .name, .photo-float {
     position: absolute;
@@ -71,8 +74,9 @@
   }
 
   .card {
+    max-width: 100vw; /* ✅ Nunca maior que a tela */
+  box-sizing: border-box;
   width: 90%;
-  max-width: 480px;
   height: 300px;
   position: relative;
   overflow: hidden;
