@@ -1,0 +1,241 @@
+  body {
+    background: #a3291d;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .heart, .name, .photo-float {
+    position: absolute;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.8;
+    z-index: 0;
+  }
+
+  .heart {
+    width: 20px;
+    height: 20px;
+    background: white;
+    transform: rotate(45deg);
+  }
+
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+  }
+
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+
+  .heart::after {
+    top: 0;
+    left: -10px;
+  }
+
+  .name {
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    animation-duration: 8s;
+  }
+
+  .photo-float {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation-duration: 9s;
+    border: 3px solid white;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-120vh) scale(0.3);
+      opacity: 0;
+    }
+  }
+
+  .card {
+    width: 580px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border: 10px solid #a3291d;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+  }
+
+  .page {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: row;
+    padding: 6px;
+    color: #5c2c1a;
+  }
+
+  .page.active {
+    display: flex;
+    animation: flipPage 0.8s ease;
+  }
+
+  @keyframes flipPage {
+    from { transform: rotateY(90deg); opacity: 0; }
+    to { transform: rotateY(0); opacity: 1; }
+  }
+
+  .text-side {
+    width: 50%;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    text-align: center;
+  }
+
+  .image-side {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-side img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .image-side img:hover {
+    transform: scale(1.1);
+  }
+
+  .cover .image-side img,
+.hidden-message .image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0; /* remove o arredondamento */
+}
+
+
+  .cover, .hidden-message {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1em;
+    background: white;
+    color: #a3291d;
+  }
+
+  .navigation {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 100;
+  }
+
+  .nav-btn {
+    padding: 10px 24px;
+    border-radius: 30px;
+    border: 2px solid white;
+    background: white;
+    color: #a3291d;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .nav-btn:hover {
+    background: transparent;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+  
+  .nav-btn:active {
+    transform: scale(0.95);
+    background: #f9d4cd;
+    color: #a3291d;
+  }
+  
+
+  .text-side.full-text {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 16px;
+    align-items: center;
+  }
+
+  .photo-wall {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wall-gallery-container {
+  width: 480px; /* mesma largura do cartão */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wall-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px #a3291d;
+  text-align: center;
+}
+
+.wall-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.wall-gallery img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid white;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.wall-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+
+
+  
