@@ -96,7 +96,7 @@ function createName() {
     setInterval(createHeart, 250);
     setInterval(() => {
       if (Math.random() < 0.6) createName();
-      if (Math.random() < 0.4) createPhoto();
+      if (Math.random() < 0.3) createPhoto();
     }, 1500);
 
     document.querySelector('.nav-btn:nth-child(1)').addEventListener('click', prevPage);
