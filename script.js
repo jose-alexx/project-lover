@@ -103,15 +103,15 @@ function createName() {
     document.querySelector('.nav-btn:nth-child(2)').addEventListener('click', nextPage);
 
     const music = document.getElementById("bg-music");
-const toggleBtn = document.getElementById("music-toggle");
 
-toggleBtn.addEventListener("click", () => {
+// Ao carregar a página e detectar o primeiro clique (qualquer botão), ativa o som
+window.addEventListener("click", () => {
   if (music.paused) {
+    music.muted = false;
     music.play();
-    toggleBtn.textContent = "⏸️";
   } else {
-    music.pause();
-    toggleBtn.textContent = "▶️";
+    music.muted = false;
   }
 });
+
 

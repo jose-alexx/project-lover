@@ -1,0 +1,36 @@
+@media (max-width: 600px) {
+  .card {
+    height: 240px;
+  }
+
+  .page .text-side {
+    font-size: 0.9em;
+    padding: 12px;
+  }
+
+  .wall-title {
+    font-size: 1.5em;
+  }
+
+  .wall-gallery img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #music-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .name {
+    font-size: 1.2em;
+  }
+
+  .photo-float {
+    width: 60px;
+    height: 60px;
+  }
+}
