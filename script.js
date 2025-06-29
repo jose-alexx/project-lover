@@ -36,6 +36,8 @@ const pages = document.querySelectorAll('.page');
       'Imgs/Imagem9.png',
       'Imgs/Imagem10.png',
       'Imgs/Imagem11.png',
+      'Imgs/Imagem14.png',
+      'Imgs/Imagem15.png',
       'Imgs/Imagem12.png',
       'Imgs/Imagem13.png'
       
